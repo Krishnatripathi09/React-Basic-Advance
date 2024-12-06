@@ -1,0 +1,9 @@
+# Node articfact files
+
+node_modules/
+dist/
+
+#Applications
+.app
+
+.parcel-cache
