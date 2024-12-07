@@ -4,6 +4,7 @@ const heading = React.createElement(
   "h1",
   {
     id: "title",
+    key: "h1",
   },
   "Heading 1"
 );
@@ -12,6 +13,7 @@ const heading2 = React.createElement(
   "h2",
   {
     id: "title",
+    key: "h1",
   },
   "Heading 2"
 );

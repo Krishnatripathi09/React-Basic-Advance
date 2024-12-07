@@ -2,9 +2,8 @@
   "name": "react-full-learning",
   "version": "1.0.0",
   "description": "This is my React app from Basic's",
-  "main": "App.js",
   "scripts": {
-    "start":"parcel index.html",
+    "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest"
   },
@@ -19,6 +18,8 @@
   },
   "homepage": "https://github.com/Krishnatripathi09/React-Basic-Advance#readme",
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "parcel": "^2.13.2",
     "process": "^0.11.10"
   },
@@ -26,7 +27,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
-  "browserlist":[
-    "last 2 versions"
+  "browserslist": [
+    "last 2  versions"
   ]
 }
