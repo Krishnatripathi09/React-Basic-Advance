@@ -25,8 +25,24 @@ const Header = () => {
     </div>
   );
 };
+
+const RestrauntCard = () => {
+  return (
+    <div className="card">
+      <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/zxlwn9pn8ztsba8ehzuu" />
+      <h2>Burger King</h2>
+      <h3>Burgers, American</h3>
+      <h4>4.2 Stars</h4>
+    </div>
+  );
+};
+
 const Body = () => {
-  return <h4>Body</h4>;
+  return (
+    <div>
+      <RestrauntCard />
+    </div>
+  );
 };
 const Footer = () => {
   return <h4>Footer</h4>;
