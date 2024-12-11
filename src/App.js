@@ -44,15 +44,12 @@ export const RestrauntCard = ({
 const Body = () => {
   return (
     <div className="restaurant-list">
-      <RestrauntCard {...resList[0].data} />
-      <RestrauntCard {...resList[1].data} />
-      <RestrauntCard {...resList[2].data} />
-      <RestrauntCard {...resList[3].data} />
-      <RestrauntCard {...resList[4].data} />
-      <RestrauntCard {...resList[5].data} />
-      <RestrauntCard {...resList[6].data} />
-      <RestrauntCard {...resList[7].data} />
-      <RestrauntCard {...resList[8].data} />
+{
+resList.map((res)=>{
+  return <RestrauntCard {...res.data}/>
+}) 
+  }
+      
     </div>
   );
 };
