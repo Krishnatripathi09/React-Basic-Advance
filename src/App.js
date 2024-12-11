@@ -23,11 +23,13 @@ const burgerKing = {
   rating: "4.2",
 };
 
-export const RestrauntCard = ({ restaurant }) => {
-  console.log(restaurant);
-  const { name, cuisines, avgRating, slaString, cloudinaryImageId } =
-    restaurant.data;
-  console.log(name, cuisines);
+export const RestrauntCard = ({
+  name,
+  cuisines,
+  avgRating,
+  slaString,
+  cloudinaryImageId,
+}) => {
   return (
     <div className="card">
       <img src={CDN_URL + cloudinaryImageId} />
@@ -42,15 +44,15 @@ export const RestrauntCard = ({ restaurant }) => {
 const Body = () => {
   return (
     <div className="restaurant-list">
-      <RestrauntCard restaurant={resList[0]} />
-      <RestrauntCard restaurant={resList[1]} />
-      <RestrauntCard restaurant={resList[2]} />
-      <RestrauntCard restaurant={resList[3]} />
-      <RestrauntCard restaurant={resList[4]} />
-      <RestrauntCard restaurant={resList[5]} />
-      <RestrauntCard restaurant={resList[6]} />
-      <RestrauntCard restaurant={resList[7]} />
-      <RestrauntCard restaurant={resList[8]} />
+      <RestrauntCard {...resList[0].data} />
+      <RestrauntCard {...resList[1].data} />
+      <RestrauntCard {...resList[2].data} />
+      <RestrauntCard {...resList[3].data} />
+      <RestrauntCard {...resList[4].data} />
+      <RestrauntCard {...resList[5].data} />
+      <RestrauntCard {...resList[6].data} />
+      <RestrauntCard {...resList[7].data} />
+      <RestrauntCard {...resList[8].data} />
     </div>
   );
 };
