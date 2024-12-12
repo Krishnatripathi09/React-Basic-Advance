@@ -17,7 +17,7 @@ const [restaurants,setRestaurnts] =useState(resList)
     
     useEffect(()=>{
         console.log("this is called first time")
-    },[searchText])
+    },[])
 
 
     return (
