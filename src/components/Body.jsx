@@ -15,10 +15,13 @@ const Body = () => {
 const [restaurants,setRestaurnts] =useState(resList)
     const [searchText,setSearchText]=useState();
     
+//when we have empty dependency array the useEffet hook will be called after Initial Render. 
+
     useEffect(()=>{
         console.log("this is called first time")
     },[])
 
+    console.log("render")
 
     return (
 
