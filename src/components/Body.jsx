@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {RestaurantCard }from "./RestaurantCard";
 import resList from "../utils/mockData";
 import { useState } from "react";
@@ -14,6 +14,12 @@ const Body = () => {
     
 const [restaurants,setRestaurnts] =useState(resList)
     const [searchText,setSearchText]=useState();
+    
+    useEffect(()=>{
+        console.log("this is called first time")
+    },[searchText])
+
+
     return (
 
 
