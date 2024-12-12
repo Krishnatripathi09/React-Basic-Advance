@@ -1,9 +1,10 @@
+import { LOGO_URL } from "../utils/constants";
 export const Title = () => (
   <a href="/">
     <img
       className="logo"
       alt="logo"
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGgC-F1sV7Bis8bwmZSQj7VEhTM8gV0FxBHg&s"
+      src={LOGO_URL}
     />
   </a>
 );
