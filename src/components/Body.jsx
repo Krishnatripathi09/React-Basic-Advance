@@ -20,11 +20,14 @@ const [restaurants,setRestaurnts] =useState(resList)
 //It will be called everytime my dependency(searchText) changes 
 //
     useEffect(()=>{
-        console.log("this is called first time")
-    },[searchText])
+        fetchDataFromSwiggy();
+    },[])
 
-    console.log("render")
-
+  async function fetchDataFromSwiggy(){
+   const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.29844139999999&lng=77.99313599999999&collection=83637&tags=layout_CCS_Burger&sortBy=&filters=&type=rcv2&offset=0&page_type=null")
+const json = await data.json();
+console.log(json)
+}
     return (
 
 
