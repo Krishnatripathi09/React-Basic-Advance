@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import {RestaurantCard }from "./RestaurantCard";
+import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/mockData";
 import { useState } from "react";
 
@@ -51,8 +51,8 @@ onChange={(e)=>{
 
 
       <div className="restaurant-list">
-        {restaurants.map((res) => {
-          return <RestaurantCard {...res.data} key={res.data.id} />;
+        {restaurants.map((restaurant) => {
+          return <RestaurantCard resData={restaurant} key={restaurant.data.id} />;
         })}
       </div>
       </>
