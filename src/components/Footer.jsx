@@ -1,5 +1,5 @@
-export const Footer = () => {
-    return <h4>Footer</h4>;
-  };
+// export const Footer = () => {
+//     return <h4>Footer</h4>;
+//   };
 
   

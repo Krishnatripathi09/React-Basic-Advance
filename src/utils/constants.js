@@ -5,4 +5,4 @@ export const IMAGE_CDN_URL =
   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
 
 export const LOGO_URL =
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGgC-F1sV7Bis8bwmZSQj7VEhTM8gV0FxBHg&s";
+  "C:\Users\Dell\OneDrive\Documents\REACT-FULL-LEARNING\src\images\Food_Image.png";
