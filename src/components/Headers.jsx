@@ -1,34 +1,25 @@
-// import { LOGO_URL } from "../utils/constants";
-// import { useState } from "react";
+import { LOGO_URL } from "../utils/constants";
 
-// export const Title = () => (
-//   <a href="/">
-//     <img
-//       className="logo"
-//       alt="logo"
-//       src={LOGO_URL}
-//     />
-//   </a>
-// );
-// const Header = () => {
-// const [title,setTitle] =useState("Food Villa")
+export const Header = () => {
+  return (
+    <>
+      <div className="header">
+        <div>
+          <img
+            className="logo"
+            src={LOGO_URL}
+          />
+        </div>
 
-//   return (
-//     <div className="header">
-//       <Title />
-//       <h1>{title}</h1>
-//       <button onClick={(e)=>{
-//         setTitle("Food App")
-//       }}>Click Me</button>
-//       <div className="nav-items">
-//         <ul>
-//           <li>Home</li>
-//           <li>About</li>
-//           <li>Contact</li>
-//           <li>Cart</li>
-//         </ul>
-//       </div>
-//     </div>
-//   );
-// };
-// export default Header;
+        <div className="nav-items">
+          <ul>
+            <li href=""> Home </li>
+            <li>About-Us </li>
+            <li>Contact-Us </li>
+            <li>Cart </li>
+          </ul>
+        </div>
+      </div>
+    </>
+  );
+};
