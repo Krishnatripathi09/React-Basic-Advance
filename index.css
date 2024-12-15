@@ -5,9 +5,13 @@
 
 }
 .logo{
-    width: 200px;
+    width: 150px;
+    height: 90px;
 }
 
+.nav-items{
+    padding: 0px 20px;
+}
 .nav-items>ul{
     display: flex;
     padding: 0px;
@@ -17,4 +21,28 @@
 .nav-items>ul>li{
 padding: 10px;
 margin:10px;
+}
+
+.res-card{
+    padding: 5px;
+    margin:5px;
+    width: 200px;
+    height: 280px;
+   
+}
+
+.res-card:hover{
+    border: 1px solid black;
+}
+
+.res-image{
+    padding: 5px;
+    width:170px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.res-container {
+    display:flex;
+   flex-wrap: wrap;
 }
