@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom/client";
 import { Footer } from "./components/Footer";
+import resList from "./utils/mockData";
 
 const Header = () => {
   return (
@@ -25,18 +26,22 @@ const Header = () => {
   );
 };
 
-const RestaurantCard = ({ resName, cuisine }) => {
+const RestaurantCard = ({ resData }) => {
   return (
     <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
       <img
         className="res-image"
         alt="burger"
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/df61854477027d394f9a4943ec5c2bfb"
+        src={
+          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/" +
+          resData.data.cloudinaryImageId
+        }
       />
-      <h3>{resName}</h3>
-      <h4>{cuisine}</h4>
-      <h4>4.4 Stars</h4>
-      <h4>25 minutes</h4>
+      <h3>{resData.data.name}</h3>
+      <h4>{resData.data.cuisines.join(",")}</h4>
+      <h4>{resData.data.avgRating} Stars</h4>
+      <h4>{resData.data.costForTwo / 100} Rs for Two</h4>
+      <h4>{resData.data.deliveryTime} mins</h4>
     </div>
   );
 };
@@ -46,8 +51,9 @@ const Body = () => {
     <div className="body">
       <div className="Search">Search</div>
       <div className="res-container">
-        <RestaurantCard resName="McDonald's" cuisine="Biryani,North-Indian" />
-        <RestaurantCard resName="KFC" cuisine="Coke-Fries" />
+        {resList.map((restaurant, index) => (
+          <RestaurantCard key={index} resData={restaurant} />
+        ))}
       </div>
     </div>
   );
