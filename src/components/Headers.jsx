@@ -6,9 +6,11 @@ export const Header = () => {
     console.log("Header Rendered")
 
     //If no Dependency array ==> useEffect is called after every Render;
+    //If Empty-dependency array then useEffect is called on initial Render(Just Once)
+    //If dependency array is btnClick ==> then it is called everyTime btnClick is updated
     useEffect(()=>{
         console.log("useEffect Called")
-    })
+    },[btnClick])
   return (
     <>
       <div className="header">
