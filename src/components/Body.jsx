@@ -6,7 +6,7 @@ export const Body = () => {
 const [listOfRestaurant,setListOfRestaurant] =useState([])
 const [filteredRes,setFilteredRes] = useState([])
 const [searchText,setSearchText] = useState("")
-console.log("Body Rendererd")
+
 
 useEffect(()=>{
     fetchData()

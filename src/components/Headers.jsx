@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { LOGO_URL } from "../utils/constants";
-
-
-
 
 export const Header = () => {
     const [btnClick,setBtnClick] = useState("Log-in")
     console.log("Header Rendered")
+
+    //If no Dependency array ==> useEffect is called after every Render;
+    useEffect(()=>{
+        console.log("useEffect Called")
+    })
   return (
     <>
       <div className="header">
@@ -19,7 +21,7 @@ export const Header = () => {
 
         <div className="nav-items">
           <ul>
-            <li href=""> Home </li>
+            <li > Home </li>
             <li>About-Us </li>
             <li>Contact-Us </li>
             <li>Cart </li>
