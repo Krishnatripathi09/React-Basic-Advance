@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 
 export const Header = () => {
     const [btnClick,setBtnClick] = useState("Log-in")
-   
-
-   
     
   return (
     <>
