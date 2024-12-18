@@ -6,3 +6,6 @@ export const IMAGE_CDN_URL =
 
 export const LOGO_URL =
   "https://cdn.dribbble.com/userupload/4288549/file/original-438b97178ade9d02cb34fd941adc6357.jpg?format=webp&resize=400x300&vertical=center";
+
+export const MENU_API =
+  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=";
