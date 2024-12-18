@@ -9,8 +9,9 @@ const About = () => {
       <h1>About</h1>
       <h2>This is React Learning</h2>
       <h3>{console.log("Inside Parent component")}</h3>
-      <User />
+      {/* <User /> */}
       <UserClass name={"Krishna Tripathi"} Location={"Maharashtra"}/>
+      <UserClass name={"Elon-Musk"} Location={"USA"}/>
     </div>
   )
 };
