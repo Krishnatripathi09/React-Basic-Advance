@@ -3,7 +3,9 @@ class UserClass extends React.Component {
 constructor(props){
     super(props);
 
-    console.log(props)
+   this.state={
+   count:0
+   }
 }
 
 
@@ -12,6 +14,7 @@ constructor(props){
         const {name,Location} =this.props
         return (
             <div className="user-card">
+                <h2>{this.state.count}</h2>
               <h2>Name:{name}</h2>
               <h2>Location:{Location}</h2>
               <h2>Contact: 9284640248</h2>
