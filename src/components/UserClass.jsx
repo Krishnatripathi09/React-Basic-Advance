@@ -15,11 +15,7 @@ constructor(props){
 
 
 async componentDidMount(){
-const data = await fetch("https://api.github.com/users/krishnatripathi09",{
-    headers: {
-      Authorization: `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`,
-    },
-  }) ;
+const data = await fetch("https://api.github.com/users/krishnatripathi09") ;
 const json = await data.json();
 console.log(json)
 this.setState({
