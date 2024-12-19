@@ -10,7 +10,6 @@ const About = () => {
       <h2>This is React Learning</h2>
       {/* <User /> */}
       <UserClass name={"Krishna Tripathi"} Location={"Maharashtra"}/>
-     
     </div>
   )
 };
