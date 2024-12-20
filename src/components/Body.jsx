@@ -11,7 +11,6 @@ const [listOfRestaurant,setListOfRestaurant] =useState([])
 const [filteredRes,setFilteredRes] = useState([])
 const [searchText,setSearchText] = useState("")
 
-
 useEffect(()=>{
     fetchData()
 },[])
@@ -39,28 +38,30 @@ if(onlineStatus===false) return (
 
     return listOfRestaurant.length===0 ? (<Shimmer/>) : ( 
       <div className="body">
-        <div className="filter">
-            <div className="search">
-            <input type="text" className="search-box" value={searchText} onChange={(e)=>{
+        <div className="filter flex">
+            <div className="search m-4 p-4">
+            <input type="text" className="border border-solid border-black rounded" value={searchText} onChange={(e)=>{
                 setSearchText(e.target.value)
             }}/>
-            <button onClick={()=>{
+            <button className="px-4 py-2 bg-green-200 m-4 rounded-lg"onClick={()=>{
                const filtered = listOfRestaurant.filter((res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()))
                setFilteredRes(filtered)
 
             }}>Search</button>
             </div>
-            
-            <button className="filter-btn" 
+            <div className=" filter m-4 p-4 flex items-center">
+            <button className="px-4 py-2 bg-gray-200 rounded-lg" 
             onClick={()=>{
                 setListOfRestaurant()
                const  filteredList =listOfRestaurant.filter((res)=>res.info.avgRating>4.2);
                setListOfRestaurant(filteredList)
             }}
-            >Top Rated Button</button>
+            >Top Rated Button
+            </button>
+            </div>
         </div>
         <div>
-          <div className="res-container">
+          <div className="flex flex-wrap">
             {filteredRes.map((restaurant) => (
               <Link key={restaurant.info.id} to={"/restaurants/"+ restaurant.info.id}><RestaurantCard  resData={restaurant} /></Link>
               

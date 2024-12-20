@@ -13,7 +13,7 @@ export const RestaurantCard = (props) => {
     sla,
   } = resData?.info;
   return (
-    <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
+    <div className="res-card m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200" >
       <img
         className="res-image"
         alt="burger"
@@ -22,8 +22,8 @@ export const RestaurantCard = (props) => {
           cloudinaryImageId
         }
       />
-      <h3>{name}</h3>
-      <h4 >{cuisines.join(",")}</h4>
+      <h3 className="font-bold py-2 text-lg ">{name}</h3>
+      <h4 className="break-words max-w-full">{cuisines.join(",")}</h4>
       <h4>{avgRating} Stars</h4>
       <h4>{costForTwo} </h4>
       <h4>{sla.slaString}</h4>
