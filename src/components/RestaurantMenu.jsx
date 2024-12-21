@@ -7,6 +7,8 @@ import RestaurantCategory from "./RestaurantCategory";
 const RestaurantMenu =() =>{
 const {resId}=useParams();
 
+
+const dummy ="Dummy Data";
 const [showIndex,setShowIndex] =useState(0)
 
 // const handleClick =()=>{
@@ -34,7 +36,7 @@ const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR.cards.f
           data={category?.card?.card} 
            showItems={index == showIndex ? true :false}
            setShowIndex={() => setShowIndex(index)}
-           //dummy={dummy}
+           dummy={dummy}
           
         />
       ))}

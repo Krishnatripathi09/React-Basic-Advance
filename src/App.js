@@ -7,20 +7,30 @@ import ContactUs from "./components/ContactUs";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 // import Grocery from "./components/Grocery";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import Shimmer from "./components/Shimmer";
-
+import UserContext from "./utils/UserContext";
 const Grocery = lazy(() => import("./components/Grocery"));
 
 const About = lazy(() => import("./components/About"));
 
 const AppLayout = () => {
+  const [userName, setUserName] = useState();
+  useEffect(() => {
+    const data = {
+      name: "Krishna Tripathi",
+    };
+    setUserName(data.name);
+  });
+
   return (
     <>
-      <div className="app">
-        <Header />
-        <Outlet />
-      </div>
+      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        <div className="app">
+          <Header />
+          <Outlet />
+        </div>
+      </UserContext.Provider>
     </>
   );
 };

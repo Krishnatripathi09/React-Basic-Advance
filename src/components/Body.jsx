@@ -1,9 +1,9 @@
 import { RestaurantCard,withOpenLabel } from "./RestaurantCard";
-import { useState,useEffect} from "react";
+import { useState,useEffect,useContext} from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-
+import UserContext from "../utils/UserContext";
 
 export const Body = () => {
 
@@ -13,9 +13,7 @@ const [searchText,setSearchText] = useState("")
 
  // HOC for RestaurantCard with Open Label
  const RestaurantCardIsOpen = withOpenLabel(RestaurantCard);
-
-console.log(listOfRestaurant)
-
+const {loggedInUser,setUserName} =useContext(UserContext)
 useEffect(()=>{
     fetchData()
 },[])
@@ -63,6 +61,11 @@ if(onlineStatus===false) return (
             }}
             >Top Rated Button
             </button>
+            </div>
+
+            <div className=" filter m-4 p-4 flex items-center">
+              <label>UserName: </label>
+           <input className="border border-black p-2"  value={loggedInUser} onChange={(e)=>setUserName(e.target.value)} />
             </div>
         </div>
         <div>
