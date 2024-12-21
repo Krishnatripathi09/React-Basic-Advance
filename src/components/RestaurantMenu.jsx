@@ -1,10 +1,17 @@
 import { useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
+import { useState } from "react";
 import useFetchMenu from "../utils/useFetchMenu";
 import RestaurantCategory from "./RestaurantCategory";
 
 const RestaurantMenu =() =>{
 const {resId}=useParams();
+
+const [showIndex,setShowIndex] =useState(0)
+
+// const handleClick =()=>{
+//     setShowItem(!showItems)
+// }
 
 const resInfo = useFetchMenu(resId)
 if(resInfo==null) return <Shimmer />;
@@ -24,10 +31,10 @@ const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR.cards.f
 {categories.map((category, index) => (
         <RestaurantCategory
           key={category?.card?.card?.title}
-          data={category?.card?.card}
-           //showItems={index == showIndex ? true : false}
-           //setShowIndex={() => setShowIndex(index)}
-         //  dummy={dummy}
+          data={category?.card?.card} 
+           showItems={index == showIndex ? true :false}
+           setShowIndex={() => setShowIndex(index)}
+           //dummy={dummy}
           
         />
       ))}
