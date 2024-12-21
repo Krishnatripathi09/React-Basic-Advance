@@ -30,3 +30,17 @@ export const RestaurantCard = (props) => {
     </div>
   );
 };
+
+
+export const withOpenLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label className="font-bold absolute bg-green-500 text-white m-2  rounded-md">
+          Open
+        </label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
+};

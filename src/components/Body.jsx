@@ -1,4 +1,4 @@
-import { RestaurantCard } from "./RestaurantCard";
+import { RestaurantCard,withOpenLabel } from "./RestaurantCard";
 import { useState,useEffect} from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -10,6 +10,11 @@ export const Body = () => {
 const [listOfRestaurant,setListOfRestaurant] =useState([])
 const [filteredRes,setFilteredRes] = useState([])
 const [searchText,setSearchText] = useState("")
+
+ // HOC for RestaurantCard with Open Label
+ const RestaurantCardIsOpen = withOpenLabel(RestaurantCard);
+
+console.log(listOfRestaurant)
 
 useEffect(()=>{
     fetchData()
@@ -61,11 +66,20 @@ if(onlineStatus===false) return (
             </div>
         </div>
         <div>
-          <div className="flex flex-wrap">
+        <div className="flex flex-wrap">
             {filteredRes.map((restaurant) => (
-              <Link key={restaurant.info.id} to={"/restaurants/"+ restaurant.info.id}><RestaurantCard  resData={restaurant} /></Link>
-              
+              <Link key={restaurant.info.id} to={"/restaurants/"+ restaurant.info.id}>
+               
+                {restaurant.info.isOpen ? (
+              <RestaurantCardIsOpen resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
+                
+                </Link>
+                
             ))}
+            
             
           </div>
         </div>
