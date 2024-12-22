@@ -21,3 +21,11 @@ This repository is a hands-on practice space where I:
 1. Clone the repository:  
    git clone https://github.com/Krishnatripathi09/React-Basic-Advance.git
    cd React-Basic-Advance
+
+# Redux-ToolKit 
+ -Install @reduxjs/toolKit and react-redux
+ -Build our Store
+ -Connect our Store 
+- Slice(CartSlice)
+- dispatch(action)
+- Selector
