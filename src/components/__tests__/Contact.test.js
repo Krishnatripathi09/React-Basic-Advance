@@ -6,24 +6,27 @@ import {
 } from "@testing-library/react";
 import ContactUs from "../ContactUs";
 import "@testing-library/jest-dom";
-test("Should load contact us page", () => {
-  render(<ContactUs />);
 
-  const heading = screen.getByRole("heading");
+describe("Contact Us Page Test Cases", () => {
+  test("Should load contact us page", () => {
+    render(<ContactUs />);
 
-  expect(heading).toBeInTheDocument();
-});
-test("Should load Button Inside Contact us page", () => {
-  render(<ContactUs />);
+    const heading = screen.getByRole("heading");
 
-  const Button = screen.getByText("Submit");
+    expect(heading).toBeInTheDocument();
+  });
+  test("Should load Button Inside Contact us page", () => {
+    render(<ContactUs />);
 
-  expect(Button).toBeInTheDocument();
-});
+    const Button = screen.getByText("Submit");
 
-test("should load 2 input boxes on Contact Page", () => {
-  render(<ContactUs />);
-  const inputBoxes = screen.getAllByRole("textbox");
+    expect(Button).toBeInTheDocument();
+  });
 
-  //expect(inputBoxes)
+  test("should load 2 input boxes on Contact Page", () => {
+    render(<ContactUs />);
+    const inputBoxes = screen.getAllByRole("textbox");
+
+    expect(inputBoxes.length);
+  });
 });
