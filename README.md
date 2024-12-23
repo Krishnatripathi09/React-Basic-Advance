@@ -29,3 +29,17 @@ This repository is a hands-on practice space where I:
 - Slice(CartSlice)
 - dispatch(action)
 - Selector
+
+# Testing
+-Unit Testing
+-Integration Testing
+-End to End Testing -E2E Testing
+
+# Setting up Testing in Our App
+-Install React Testing Library
+-Installed Jest
+-Installed Babel dependencies (from Parcel wesbsite Documentation JS Section using Babel)
+-Configured Babel
+-Configured Parcel config file to  disable default babel transpilation
+-Jest Configuration 
+--Install JS DOM library
