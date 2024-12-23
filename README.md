@@ -43,3 +43,6 @@ This repository is a hands-on practice space where I:
 -Configured Parcel config file to  disable default babel transpilation
 -Jest Configuration 
 --Install JS DOM library
+-Installed @babel/preset-react to make JSX work in test cases
+-Include @babel/preset-react inside my babel config
+-Installed @testing-library/jest-dom
