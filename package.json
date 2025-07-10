@@ -4,7 +4,7 @@
   "description": "This is my React app from Basic's",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "build": "parcel build",
     "test": "jest"
   },
   "repository": {
